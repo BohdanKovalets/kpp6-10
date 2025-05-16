@@ -1,0 +1,7 @@
+{
+  "name": "cleaning-services",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
