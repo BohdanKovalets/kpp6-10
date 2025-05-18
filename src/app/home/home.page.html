@@ -1,4 +1,37 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
-  <app-service-list></app-service-list>
+
+  <ion-button expand="full" (click)="addFormShow()">Додати послугу</ion-button>
+
+  <app-add-service
+    *ngIf="showAddForm"
+    (serviceAdd)="onServiceAdd($event)"
+  ></app-add-service>
+
+  <ion-card *ngFor="let service of services; index as i">
+    <ion-card-header>
+      <ion-card-title>{{ service.getName() }}</ion-card-title>
+      <ion-card-subtitle>{{ service.getType() }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item *ngFor="let detail of service.getDetails()">
+        <ion-label>{{ detail }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ціна: {{ service.getPrice() }} грн</ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-button (click)="editFormShow(i)">Редагувати</ion-button>
+    <ion-button color="danger" (click)="deleteService(i)">
+      Видалити
+    </ion-button>
+
+    <app-edit-service
+      *ngIf="showEditForm && i === editFormNumber"
+      (serviceEdit)="editService($event, i)"
+      [service]="service"
+    ></app-edit-service>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,53 @@
+.edit-form,
+.course-card {
+    margin: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 16px;
+}
+
+ion-card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+ion-card-subtitle {
+    color: #666;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+ion-item {
+    --background: #ffffff;
+    --color: #000000;
+    --padding-start: 12px;
+    --inner-padding-end: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+ion-label {
+    color: #000000;
+}
+
+ion-input {
+    --background: #0062ff;
+    --color: #000000;
+    --placeholder-color: #888888;
+    font-size: 1rem;
+}
+
+ion-button {
+    margin-top: 16px;
+    --background: #428cff;
+    --color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+}

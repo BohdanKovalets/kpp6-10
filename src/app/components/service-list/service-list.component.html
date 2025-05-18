@@ -1,7 +1,4 @@
-<ion-card
-  class="service-card"
-  *ngFor="let service of cleaningServiceReadService.services; index as i"
->
+<ion-card class="service-card" *ngFor="let service of services; index as i">
   <ion-card-header class="service-header">
     <ion-card-title>{{ service.getName() }}</ion-card-title>
     <ion-card-subtitle>{{ service.getType() }}</ion-card-subtitle>

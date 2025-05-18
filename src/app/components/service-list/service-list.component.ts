@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { CleaningServiceReadService } from '../../services/cleaning-service-read.service';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { ICleaningService } from '../../models/icleaning-service';
 
 @Component({
   selector: 'app-service-list',
@@ -10,12 +10,8 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './service-list.component.html',
   styleUrls: ['./service-list.component.scss'],
 })
-export class ServiceListComponent implements OnInit {
-  constructor(public cleaningServiceReadService: CleaningServiceReadService) {}
-
-  ngOnInit(): void {
-    this.cleaningServiceReadService.load();
-  }
+export class ServiceListComponent {
+  @Input() services: ICleaningService[] = [];
 
   order(serviceName: string): void {
     console.log(`Замовлено: ${serviceName}`);

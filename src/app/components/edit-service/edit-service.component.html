@@ -1,0 +1,87 @@
+<form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
+  <ion-card class="course-card">
+    <ion-card-header>
+      <ion-card-title>Редагування послуги</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="body">
+      <ion-item>
+        <ion-input
+          label="Назва"
+          formControlName="name"
+          labelPlacement="floating"
+          errorText="Мін. довжина — 3 символи"
+          class="custom"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Ціна"
+          formControlName="price"
+          type="number"
+          labelPlacement="floating"
+          errorText="Ціна повинна бути ≥ 0"
+          class="custom"
+        ></ion-input>
+      </ion-item>
+
+      <ng-container *ngIf="service.getType() === 'ApartmentCleaning'">
+        <ion-item>
+          <ion-input
+            label="Кількість кімнат"
+            formControlName="rooms"
+            type="number"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+      </ng-container>
+
+      <ng-container *ngIf="service.getType() === 'OfficeCleaning'">
+        <ion-item>
+          <ion-input
+            label="Площа (м²)"
+            formControlName="squareMeters"
+            type="number"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+      </ng-container>
+
+      <ng-container *ngIf="service.getType() === 'WindowWashing'">
+        <ion-item>
+          <ion-input
+            label="Поверхів"
+            formControlName="floors"
+            type="number"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            label="Дата"
+            formControlName="date"
+            type="text"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+      </ng-container>
+
+      <ng-container *ngIf="service.getType() === 'DeepCleaning'">
+        <ion-item>
+          <ion-input
+            label="Площа (м²)"
+            formControlName="area"
+            type="number"
+            labelPlacement="floating"
+          ></ion-input>
+        </ion-item>
+      </ng-container>
+
+      <ion-button expand="full" type="submit" [disabled]="serviceForm.invalid">
+        Зберегти зміни
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</form>
