@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonCard,
@@ -17,6 +18,8 @@ import { EditServiceComponent } from '../components/edit-service/edit-service.co
 
 import { ICleaningService } from '../models/icleaning-service';
 import { CleaningServiceReadService } from '../services/cleaning-service-read.service';
+
+import { FilterPageComponent } from '../pages/filter-page/filter-page.component';
 
 @Component({
   selector: 'app-home',
@@ -40,7 +43,8 @@ import { CleaningServiceReadService } from '../services/cleaning-service-read.se
     HeaderComponent,
     ServiceListComponent,
     AddServiceComponent,
-    EditServiceComponent 
+    EditServiceComponent,
+    FilterPageComponent 
   ],
 })
 export class HomePage implements OnInit {

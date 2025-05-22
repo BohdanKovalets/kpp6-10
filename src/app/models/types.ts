@@ -4,3 +4,5 @@ export enum CleaningServiceType {
   WindowWashing = 'WindowWashing',
   DeepCleaning = 'DeepCleaning',
 }
+
+export const cleaningServiceType = Object.values(CleaningServiceType);
