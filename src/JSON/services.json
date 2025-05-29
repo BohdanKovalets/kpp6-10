@@ -1,0 +1,53 @@
+{
+  "services": {
+    "1": {
+      "name": "Прибирання квартири — базове",
+      "price": 600,
+      "rooms": 2,
+      "type": "ApartmentCleaning"
+    },
+    "2": {
+      "name": "Прибирання офісу — 50 м²",
+      "price": 1200,
+      "squareMeters": 50,
+      "type": "OfficeCleaning"
+    },
+    "3": {
+      "name": "Миття вікон — 5 поверхів",
+      "price": 900,
+      "floors": 5,
+      "date": "2025-06-10T00:00:00.000Z",
+      "type": "WindowWashing"
+    },
+    "4": {
+      "name": "Генеральне прибирання квартири",
+      "price": 1500,
+      "area": 70,
+      "type": "DeepCleaning"
+    },
+    "5": {
+      "name": "Преміальне прибирання квартири",
+      "price": 2000,
+      "area": 100,
+      "type": "DeepCleaning"
+    },
+    "6": {
+      "name": "Прибирання квартири — до пилиночки",
+      "price": 1000,
+      "rooms": 2,
+      "type": "ApartmentCleaning"
+    },
+    "7": {
+      "name": "Миття вікон — великий офіс",
+      "price": 2500,
+      "floors": 10,
+      "type": "WindowWashing"
+    },
+    "8": {
+      "name": "Прибирання офісу — 100 м²",
+      "price": 2500,
+      "squareMeters": 100,
+      "type": "OfficeCleaning"
+    }
+  }
+}

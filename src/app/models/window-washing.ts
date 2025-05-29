@@ -5,7 +5,7 @@ export class WindowWashing extends CleaningService {
   private date: Date;
 
   constructor(
-    id: number,
+    id: string,
     name: string,
     price: number,
     floors: number,

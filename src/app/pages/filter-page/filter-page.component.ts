@@ -40,6 +40,8 @@ export class FilterPageComponent implements OnInit, OnDestroy {
       this.count = 0;
     }
     this.configService.setType(cleaningServiceType[this.count]);
+    this.type = cleaningServiceType[this.count]; 
+    this.productService.search(cleaningServiceType[this.count]);
   }
 
   ngOnDestroy(): void {

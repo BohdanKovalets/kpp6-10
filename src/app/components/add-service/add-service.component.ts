@@ -47,8 +47,7 @@ export class AddServiceComponent implements OnInit {
     if (this.serviceForm.valid) {
       const formData = this.serviceForm.value;
       formData.type = this.currentType;
-      const service = CleaningServiceFactory.createService(formData);
-      this.serviceAdd.emit(service);
+      this.serviceAdd.emit(formData);
     } else {
       console.error('Форма невалідна');
     }

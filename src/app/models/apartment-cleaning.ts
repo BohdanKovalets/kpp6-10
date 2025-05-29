@@ -4,7 +4,7 @@ export class ApartmentCleaning extends CleaningService {
   private rooms: number = 1;
 
   constructor(
-    id: number,
+    id: string,
     name: string,
     price: number,
     rooms: number

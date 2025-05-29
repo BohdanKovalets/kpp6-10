@@ -9,7 +9,7 @@ export class CleaningServiceFactory {
     switch (data.type) {
       case 'ApartmentCleaning':
         return new ApartmentCleaning(
-          data.id,
+          String(data.id),
           data.name,
           data.price,
           data.rooms
@@ -17,7 +17,7 @@ export class CleaningServiceFactory {
 
       case 'OfficeCleaning':
         return new OfficeCleaning(
-          data.id,
+          String(data.id),
           data.name,
           data.price,
           data.squareMeters
@@ -25,7 +25,7 @@ export class CleaningServiceFactory {
 
       case 'WindowWashing':
         return new WindowWashing(
-          data.id,
+          String(data.id),
           data.name,
           data.price,
           data.floors,
@@ -34,7 +34,7 @@ export class CleaningServiceFactory {
       
       case 'DeepCleaning':
         return new DeepCleaning(
-          data.id,
+          String(data.id),
           data.name,
           data.price,
           data.area

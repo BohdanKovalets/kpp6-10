@@ -1,19 +1,19 @@
 import { ICleaningService } from './icleaning-service';
 
 export abstract class CleaningService implements ICleaningService {
-  private id: number = 0;
-  private name: string = '';
-  private price: number = 1;
+   public id: string = '';
+   public name: string = '';
+   public price: number = 1;
 
-  constructor(id: number, name: string, price: number) {
-    if (id < 0) throw new Error('id < 0');
+  constructor(id: string, name: string, price: number) {
+    if (!id) throw new Error('id < 0');
     if (price < 1) throw new Error('price < 1');
     this.id = id;
     this.name = name;
     this.price = price;
   }
 
-  getID(): number {
+  getID(): string {
     return this.id;
   }
 

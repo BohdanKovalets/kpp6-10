@@ -39,8 +39,8 @@ export class EditServiceComponent implements OnInit {
     if (this.serviceForm.valid) {
       const formData = this.serviceForm.value;
       formData.type = this.service.getType();
-      const updatedService = CleaningServiceFactory.createService(formData);
-      this.serviceEdit.emit(updatedService);
+      formData.id = this.service['id'];
+      this.serviceEdit.emit(formData);
     } else {
       console.error('Form is invalid');
     }

@@ -4,7 +4,7 @@ export class OfficeCleaning extends CleaningService {
   private squareMeters: number = 10;
 
   constructor(
-    id: number,
+    id: string,
     name: string,
     price: number,
     squareMeters: number

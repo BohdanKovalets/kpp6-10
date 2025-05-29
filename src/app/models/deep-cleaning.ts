@@ -4,7 +4,7 @@ export class DeepCleaning extends CleaningService {
   private area: number = 0;
 
   constructor(
-    id: number,
+    id: string,
     name: string,
     price: number,
     area: number

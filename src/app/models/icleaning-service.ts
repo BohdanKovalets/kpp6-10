@@ -1,5 +1,6 @@
 export interface ICleaningService {
-  getID(): number;
+  id: string;
+  getID(): string;
   getName(): string;
   getPrice(): number;
   getDetails(): string[];
